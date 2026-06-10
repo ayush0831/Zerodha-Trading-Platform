@@ -9,7 +9,6 @@ const { HoldingsModel } = require("./model/HoldingsModel");
 
 const { PositionsModel } = require("./model/PositionsModel");
 const { OrdersModel } = require("./model/OrdersModel");
-const authRouter = require("./routes/auth");
 
 const PORT = process.env.PORT || 3002;
 const uri = process.env.MONGO_URL;
@@ -18,9 +17,6 @@ const app = express();
 
 app.use(cors());
 app.use(bodyParser.json());
-
-// Auth routes
-app.use("/api/auth", authRouter);
 
 // app.get("/addHoldings", async (req, res) => {
 //   let tempHoldings = [

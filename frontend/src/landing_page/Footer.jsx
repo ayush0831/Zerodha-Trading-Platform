@@ -2,26 +2,26 @@ import React from "react";
 
 function Footer() {
   return (
-    <footer class="border-top " style={{backgroundColor: "rgb(250 250 250)"}}>
+    <footer className="border-top " style={{backgroundColor: "rgb(250 250 250)"}}>
       <div className="container mt-5 " style={{marginLeft: "10rem"}}>
-        <div class="row mt-5">
-          <div class="col">
+        <div className="row mt-5">
+          <div className="col">
             <img src="media/Images/logo.svg" style={{ width: "65%" }} />
-            <p class="text-muted mt-3" style={{ fontSize: "12px" }}>
+            <p className="text-muted mt-3" style={{ fontSize: "12px" }}>
               &copy; 2010 - 2025, Zerodha Broking Ltd.
               <br /> All rights reserved.
             </p>
-            <i class="fa-brands fa-x-twitter text-muted mx-2 fs-5"></i>
-            <i class="fa-brands fa-square-facebook text-muted mx-2 fs-5"></i>
-            <i class="fa-brands fa-instagram text-muted mx-2 fs-5"></i>
-            <i class="fa-brands fa-linkedin text-muted mx-2 fs-5"></i>
-            <hr class="text-muted"/>
-            <i class="fa-brands fa-youtube text-muted mx-2 fs-5"></i>
-            <i class="fa-brands fa-whatsapp text-muted mx-2 fs-5"></i>
-            <i class="fa-brands fa-telegram text-muted mx-2 fs-5"></i>
+            <i className="fa-brands fa-x-twitter text-muted mx-2 fs-5"></i>
+            <i className="fa-brands fa-square-facebook text-muted mx-2 fs-5"></i>
+            <i className="fa-brands fa-instagram text-muted mx-2 fs-5"></i>
+            <i className="fa-brands fa-linkedin text-muted mx-2 fs-5"></i>
+            <hr className="text-muted"/>
+            <i className="fa-brands fa-youtube text-muted mx-2 fs-5"></i>
+            <i className="fa-brands fa-whatsapp text-muted mx-2 fs-5"></i>
+            <i className="fa-brands fa-telegram text-muted mx-2 fs-5"></i>
           </div>
-          <div class="col">
-            <p class="fw-medium ">Account</p>
+          <div className="col">
+            <p className="fw-medium ">Account</p>
             <a href="" style={{textDecoration: "none",color:"gray"}}>Open demat account</a>
             <br /> <br/>
             <a href="" style={{textDecoration: "none",color:"gray"}}>Minor demat account</a>
@@ -38,8 +38,8 @@ function Footer() {
             <br /> <br/>
             <a href="" style={{textDecoration: "none",color:"gray"}}> Referral program</a>
           </div>
-          <div class="col">
-            <p class="fw-medium">Support</p>
+          <div className="col">
+            <p className="fw-medium">Support</p>
             <a href="" style={{textDecoration: "none",color:"gray"}}>Contact us</a>
             <br /> <br/>
             <a href="" style={{textDecoration: "none",color:"gray"}}>Support portal</a>
@@ -56,8 +56,8 @@ function Footer() {
             <br /> <br/>
             <a href="" style={{textDecoration: "none",color:"gray"}}>Downloads</a>
           </div>
-          <div class="col">
-            <p class="fw-medium ">Company</p>
+          <div className="col">
+            <p className="fw-medium ">Company</p>
             <a href="" style={{textDecoration: "none",color:"gray"}}>About</a>
             <br /> <br/>
             <a href="" style={{textDecoration: "none",color:"gray"}}>Philosophy</a>
@@ -72,8 +72,8 @@ function Footer() {
             <br /> <br/>
             <a href="" style={{textDecoration: "none",color:"gray"}}>Open source</a>
           </div>
-          <div class="col">
-            <p class="fw-medium">Quick links</p>
+          <div className="col">
+            <p className="fw-medium">Quick links</p>
             <a href="" style={{textDecoration: "none",color:"gray"}}> Upcoming IPOs</a>
             <br /> <br/>
             <a href="" style={{textDecoration: "none",color:"gray"}}> Brokerage charges</a>
@@ -89,7 +89,7 @@ function Footer() {
             <a href="" style={{textDecoration: "none",color:"gray"}}> Sectors</a>
           </div>
         </div>
-        <div class="mt-5 fw-light text-muted" style={{ fontSize: "11px" }}>
+        <div className="mt-5 fw-light text-muted" style={{ fontSize: "11px" }}>
           <p>
             Zerodha Broking Ltd.: Member of NSE, BSE​ &​ MCX – SEBI Registration
             no.: INZ000031633 CDSL/NSDL: Depository services through Zerodha
@@ -114,7 +114,7 @@ function Footer() {
             Investments in securities market are subject to market risks; read
             all the related documents carefully before investing.
           </p>
-          <p>
+          <div>
             Attention investors: 1 Stock brokers can accept securities as
             margins from clients only by way of pledge in the depository system
             w.e.f September 01, 2020. 2 Update your e-mail and phone number with
@@ -144,7 +144,7 @@ function Footer() {
               find anyone claiming to be part of Zerodha and offering such
               services, please create a ticket here.
             </p>
-          </p>
+          </div>
         </div>
       </div>
     </footer>

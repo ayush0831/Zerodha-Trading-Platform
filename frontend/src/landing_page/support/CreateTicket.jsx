@@ -1,91 +1,123 @@
 import React from "react";
 
+const supportTopics = [
+  {
+    title: "Account Opening",
+    icon: "fa-solid fa-user-plus",
+    description: "Start your account activation journey and track document status.",
+    color: "#E8F5FF",
+  },
+  {
+    title: "Zerodha Account",
+    icon: "fa-solid fa-circle-user",
+    description: "Manage KYC, profile changes, and account details easily.",
+    color: "#F3E8FF",
+  },
+  {
+    title: "Kite",
+    icon: "fa-solid fa-chart-line",
+    description: "Get help with the Kite trading app, login, and order placement.",
+    color: "#E8F9EA",
+  },
+  {
+    title: "Funds",
+    icon: "fa-solid fa-indian-rupee-sign",
+    description: "Resolve deposit, withdrawal, and ledger-related questions.",
+    color: "#FFF4E5",
+  },
+  {
+    title: "Console",
+    icon: "fa-solid fa-desktop",
+    description: "Support for Console reports, P&L, and margin statements.",
+    color: "#E8F0FF",
+  },
+  {
+    title: "Coin",
+    icon: "fa-solid fa-coins",
+    description: "Get help with mutual funds, SIPs, and Coin investment tracking.",
+    color: "#F9EFE8",
+  },
+];
+
 function CreateTicket() {
   return (
-    <div class="container">
-      <div class="row p-5">
-        <div class="col-8">
-          <div class="border mb-4 p-2"> 
-            <span style={{border: "1px solid",backgroundColor: "skyblue"}}><i class="fa-solid fa-plus"></i></span>
-            <span type="button" class="btn fs-4 fw-medium" style={{marginRight: "30rem",marginLeft: "1rem"}}>Account Opening </span>
-            <span type="button" class="btn dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
-            </span>
-         
-            {/* <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li> 
-            </ul> */}
-          </div>
-          <div class="border mb-4 p-2">
-             <span style={{border: "1px solid",backgroundColor: "skyblue"}}><i class="fa-solid fa-circle-user"></i></span>
-            <span type="button" class="btn fs-4 fw-medium" style={{marginRight: "27rem", marginLeft: "1rem"}}>Your Zerodha Account</span>
-            <span type="button" class="btn dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
-            </span>
-
-          </div>
-          <div class="border mb-4 p-2">
-            <span style={{border: "1px solid",backgroundColor: "skyblue"}}><i class="fa-solid fa-tent-arrow-turn-left"></i></span>
-            <span type="button" class="btn fs-4 fw-medium" style={{marginRight: "39rem", marginLeft: "1rem"}}>Kite</span>
-            <span type="button" class="btn dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
-            </span>
-
-          </div>
-          <div class="border mb-4 p-2">
-            <span style={{border: "1px solid",backgroundColor: "skyblue"}}><i class="fa-solid fa-indian-rupee-sign"></i></span>
-            <span type="button" class="btn fs-4 fw-medium" style={{marginRight: "38rem", marginLeft: "1rem"}}>Funds</span>
-            <span type="button" class="btn dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
-            </span>
-
-          </div>
-          <div class="border mb-4 p-2">
-            <span style={{border: "1px solid",backgroundColor: "skyblue"}}><i class="fa-solid fa-at"></i></span>
-            <span type="button" class="btn fs-4 fw-medium" style={{marginRight: "36rem", marginLeft: "1rem"}}>Console</span>
-            <span type="button" class="btn dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
-            </span>
-
-          </div>
-          <div class="border mb-4 p-2">
-            <span style={{border: "1px solid",backgroundColor: "skyblue"}}><i class="fa-solid fa-coins"></i></span>
-            <span type="button" class="btn fs-4 fw-medium" style={{marginRight: "38rem", marginLeft: "1rem"}}>Coin</span>
-            <span type="button" class="btn dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
-            </span>
-
+    <div className="container py-5">
+      <div className="row gx-4 gy-4">
+        <div className="col-12">
+          <div className="p-4 rounded-4" style={{ backgroundColor: "#f7f9fc" }}>
+            <h2 className="fw-bold">Support categories</h2>
+            <p className="text-muted mb-0">
+              Choose the topic that best matches your issue to create a ticket faster.
+            </p>
           </div>
         </div>
-         
-           
 
-         
-
-        <div class="col-4">
-          <div
-            style={{
-              backgroundColor: "#FCF9EA",
-              borderLeft: "8px solid orange",
-            }}
-          >
-            <ul class="px-5 py-3">
-              <a href="#">
-                <li class="fs-5">
-                  Surveillance measure on scrips-
-                  <br /> October 2025
-                </li>
-              </a>
-              <a href="#">
-                <li class="fs-5">
-                  Offer for sale (OFS) - October 2025
-                </li>
-              </a>
-            </ul>
+        <div className="col-lg-8">
+          <div className="row gx-3 gy-3">
+            {supportTopics.map((topic) => (
+              <div className="col-md-6" key={topic.title}>
+                <div className="card h-100 shadow-sm border-0 rounded-4">
+                  <div className="card-body d-flex flex-column">
+                    <div
+                      className="d-inline-flex align-items-center justify-content-center rounded-3 mb-3"
+                      style={{ width: 52, height: 52, backgroundColor: topic.color }}>
+                      <i className={`${topic.icon} fs-5 text-primary`}></i>
+                    </div>
+                    <h5 className="card-title fw-semibold">{topic.title}</h5>
+                    <p className="card-text text-muted flex-grow-1">{topic.description}</p>
+                    <button className="btn btn-outline-primary mt-3 align-self-start rounded-pill px-4">
+                      Create ticket
+                    </button>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
-          <div class="" style= {{border: "1px solid grey"}}> 
-              <h4 class="p-3" style={{backgroundColor: "#EEEEEE"}}>Quick links</h4> 
-              <p class="border-bottom py-2"> <a href="#" class="p-2 fs-5" style={{textDecoration: "none"}}> 1. Track account opening</a><br/> </p>
-              <p class="border-bottom py-2"><a href="#" class="p-2 fs-5" style={{textDecoration: "none"}}>2. Track segment activation </a><br/></p>
-              <p class="border-bottom py-2"><a href="#" class="p-2 fs-5" style={{textDecoration: "none"}}>3. Intraday margins </a><br/></p>
-              <p class="border-bottom py-2"><a href="#" class="p-2 fs-5" style={{textDecoration: "none"}}>4. Kite user manual </a><br/></p>
-              <p><a href="#" class="p-2 fs-5" style={{textDecoration: "none"}}>5. Learn how to create a ticket </a></p> 
+        </div>
+
+        <div className="col-lg-4">
+          <div className="card rounded-4 shadow-sm border-0 mb-4">
+            <div className="card-body">
+              <h4 className="fw-semibold">Need help fast?</h4>
+              <p className="text-muted">
+                Select any category to launch the right support path. Our team aims to respond within 24 hours.
+              </p>
+              <div className="d-flex align-items-center gap-3 p-3 rounded-4" style={{ backgroundColor: "#f0f8ff" }}>
+                <div className="rounded-circle bg-primary text-white d-flex align-items-center justify-content-center" style={{ width: 44, height: 44 }}>
+                  <i className="fa-solid fa-headset"></i>
+                </div>
+                <div>
+                  <h6 className="mb-1">Customer care</h6>
+                  <p className="mb-0 text-muted">support@zerodhasupport.com</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="card rounded-4 shadow-sm border-0">
+            <div className="card-body">
+              <h5 className="fw-semibold mb-3">Quick links</h5>
+              <ul className="list-unstyled mb-0">
+                <li className="mb-3">
+                  <a href="#" className="text-decoration-none text-dark">
+                    <span className="fw-medium">Track account opening</span>
+                    <p className="text-muted mb-0">See your application status and next steps.</p>
+                  </a>
+                </li>
+                <li className="mb-3">
+                  <a href="#" className="text-decoration-none text-dark">
+                    <span className="fw-medium">Kite user manual</span>
+                    <p className="text-muted mb-0">Learn how to trade with Kite and manage orders.</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-decoration-none text-dark">
+                    <span className="fw-medium">Learn how to create a ticket</span>
+                    <p className="text-muted mb-0">Step-by-step guidance for faster support.</p>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>

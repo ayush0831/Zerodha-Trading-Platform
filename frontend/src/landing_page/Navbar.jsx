@@ -4,15 +4,15 @@ import {Link} from "react-router-dom"
 function Navbar() {
   return (
     <nav
-      class="navbar navbar-expand-lg border-bottom"
+      className="navbar navbar-expand-lg border-bottom"
       style={{ backgroundColor: "#ffff" }}
     >
-      <div class="container ">
-        <Link class="navbar-brand" to="/">
+      <div className="container ">
+        <Link className="navbar-brand" to="/">
           <img src="media/Images/logo.svg" style={{ width: "27%" ,paddingLeft: "50px" }} />
         </Link>
         <button
-          class="navbar-toggler"
+          className="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarSupportedContent"
@@ -20,32 +20,32 @@ function Navbar() {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+          <span className="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <form class="d-flex">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <Link class="nav-link active text-muted" aria-current="page" to="/signup">
+        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <form className="d-flex">
+            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+              <li className="nav-item">
+                <Link className="nav-link active text-muted" to="/signup">
                    Signup
                 </Link>
               </li>
-              <li class="nav-item">
-                <Link class="nav-link active text-muted" to="/about">
+              <li className="nav-item">
+                <Link className="nav-link active text-muted" to="/about">
                    About
                 </Link>
               </li>
-              <li class="nav-item">
-                <Link class="nav-link active text-muted" to="/product">
+              <li className="nav-item">
+                <Link className="nav-link active text-muted" to="/product">
                     Products
                 </Link>
-              </li><li class="nav-item">
-                <Link class="nav-link active text-muted" to="/pricing">
+              </li><li className="nav-item">
+                <Link className="nav-link active text-muted" to="/pricing">
                    Pricing
                 </Link>
               </li>
-              <li class="nav-item">
-                <Link class="nav-link active text-muted" to="/support">
+              <li className="nav-item">
+                <Link className="nav-link active text-muted" to="/support">
                     Support
                 </Link>
               </li>

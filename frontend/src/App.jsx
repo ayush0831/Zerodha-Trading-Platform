@@ -1,9 +1,7 @@
-import { useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import HomePage from "./landing_page/home/Homepage";
-import SignupPage from "./landing_page/signup/Signup";
-import LoginPage from "./landing_page/login/Login";
+import SignupPage from "./landing_page/signup/signup.jsx";
 import AboutPage from "./landing_page/about/AboutPage";
 import ProductPage from "./landing_page/products/ProductsPage";
 import PricingPage from "./landing_page/pricing/PricingPage";
@@ -14,8 +12,6 @@ import Navbar from "./landing_page/Navbar";
 import Footer from "./landing_page/Footer";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
       <BrowserRouter>
@@ -23,7 +19,6 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/signup" element={<SignupPage />} />
-          <Route path="/login" element={<LoginPage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/product" element={<ProductPage />} />
           <Route path="/pricing" element={<PricingPage />} />

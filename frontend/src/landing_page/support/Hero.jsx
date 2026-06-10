@@ -3,18 +3,24 @@ import React from "react";
 function Hero() {
   return (
     <header style={{ backgroundColor: "rgb(245 245 245)" }}>
-      <div class="container p-5">
-        <div class="row">
-          <div class="col-4">
-            <h1 class="fw-medium">Support Portal</h1>
+      <div className="container p-5">
+        <div className="row align-items-center">
+          <div className="col-4">
+            <h1 className="fw-medium">Support Portal</h1>
           </div>
-          <div class="col-6"></div>
-          <div class="col-2 ">
-            <button class="btn btn-primary btn-lg">My tickets</button>
+          <div className="col-6"></div>
+          <div className="col-2">
+            <button className="btn btn-primary btn-lg">My tickets</button>
           </div>
         </div>
-        <div class="row mt-4 text-muted">
-            <input type="search" placeholder="Eg: How do I open account, How do I activate F&O..." class="p-3"></input>
+        <div className="row mt-4 text-muted">
+          <div className="col-12">
+            <input
+              type="search"
+              placeholder="Eg: How do I open account, How do I activate F&O..."
+              className="p-3 w-100 rounded-3 border"
+            />
+          </div>
         </div>
       </div>
     </header>
