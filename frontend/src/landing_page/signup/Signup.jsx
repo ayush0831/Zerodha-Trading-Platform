@@ -18,7 +18,7 @@ const Signup = () => {
     e.preventDefault();
     console.log(formData);
 
-    window.location.href = "http://localhost:3000";
+    window.location.href = import.meta.env.VITE_DASHBOARD_URL;
   };
 
   return (
